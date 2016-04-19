@@ -5,22 +5,16 @@
 		<title>dojo core es6 system js test</title>
 		<script src="node_modules/systemjs/dist/system.js"></script>
 		<script>
-			// window.define = System.amdDefine;
-			// window.require = window.requirejs = System.amdRequire;
-
 			System.config({
 				transpiler: false,
 				defaultJSExtensions: true,
 				meta: {
-					// 'main': {
-					// 	format: 'amd'
-					// },
 					'core/*': {
-						format: 'amd'
+						scriptLoad: true
 					}
 				}
 			});
-			System.import('main.js');
+			System.import('main');
 		</script>
 	</head>
 	<body>
